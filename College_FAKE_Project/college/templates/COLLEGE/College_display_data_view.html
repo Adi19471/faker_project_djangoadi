@@ -1,0 +1,68 @@
+{% extends "COLLEGE/base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+    <h1 class="text-center bg-outline-info text-warning">DJANGO COLLEGE FAKE DATA..........!</h1>
+<div class="jumbotron-fluid ">
+    <div class="row">
+        <dic class="col-sm-6">
+         
+                <table>
+                    <thead class=" table-bordered table-shadow">
+                        <tr>
+                            <th>ID</th>
+                            <th>FIRST&nbsp;NAME</th>
+                            <th>LAST&nbsp;NAME</th>
+                            <th>USER&nbsp;NAME</th>
+                            <th>MOBILE&nbsp;&nbsp;NUMBER</th>
+                            <th>EMAIL</th>
+                            <th class="btn btn-warning">COLLEGE</th>
+                            <th>FEES</th>
+                            <th>ADDMISION&nbsp;&nbsp;NUMBER</th>
+                            <th>CITY</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        {% for i in dispaly_college %}
+                        <tr>
+                           <td>{{forloop.counter}}</td>
+                            <td>{{i.first_name}}</td>
+                            <td>{{i.last_name}}</td>
+                            <td>{{i.username}}</td>
+                            <td>{{i.mobile}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.college}}</td></a>
+                            <td>{{i.fees}}</td>
+                            <td>{{i.addmision_numbers}}</td>
+                            <td>{{i.city}}</td>
+                            
+                         
+                           
+                          </tr>
+                          {% endfor %}
+                    </tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>FIRST&nbsp;NAME</th>
+                        <th>LAST&nbsp;NAME</th>
+                        <th>USER&nbsp;NAME</th>
+                        <th>MOBILE&nbsp;&nbsp;NUMBER</th>
+                        <th>EMAIL</th>
+                        <th>COLLEGE</th>
+                        <th>FEES</th>
+                        <th>ADDMISION&nbsp;&nbsp;NUMBER</th>
+                        <th>CITY</th>
+                    </tr>
+                </table>
+        </dic>
+    </div>
+</div>
+
+</div>
+
+
+
+{% endblock %}
