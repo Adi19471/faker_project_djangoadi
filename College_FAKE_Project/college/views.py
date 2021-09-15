@@ -27,10 +27,17 @@ def college_names_view(request):
 
         data.save()
 
-    return HttpResponse("saved")
+    return render(request,'COLLEGE/newadd.html')
 
 def College_display_data(request):
-    college = CollegeDate.objects.all()
+    if request.method == "POST":
+        username = request.POST.get('one')
+      
+        return render(request,'COLLEGE/College_display_data_view.html',{'college':username})
+    else:
+
+        college = CollegeDate.objects.all()
+    
     context = {
     'dispaly_college' : college
 

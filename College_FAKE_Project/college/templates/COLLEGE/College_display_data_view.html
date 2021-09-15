@@ -6,6 +6,17 @@
 
     <h1 class="text-center bg-outline-info text-warning">DJANGO COLLEGE FAKE DATA..........!</h1>
 <div class="jumbotron-fluid ">
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <textarea type="search" name="one" id="" cols="30" rows="1" placeholder="College Name / username " ></textarea>
+            <input type="submit" value="submit" class="btn btn-outline-warning btn-sm pt-4 text-center ">
+        </form>
+    </div>
+
+
+    <hr class="mt-0">
     <div class="row">
         <dic class="col-sm-6">
          
