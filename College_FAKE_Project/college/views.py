@@ -28,12 +28,13 @@ def college_names_view(request):
         data.save()
 
     return render(request,'COLLEGE/newadd.html')
+#---------------------------------------------------------------------STRATPROGRAM #------------------------------------------------
 
 def College_display_data(request):
     if request.method == "POST":
         username = request.POST.get('one')
-      
-        return render(request,'COLLEGE/College_display_data_view.html',{'college':username})
+        username = CollegeDate.objects.exclude(username ='SRINIVAS-SIR' )
+        return render(request,'COLLEGE/College_display_data_view.html',{'username':username})
     else:
 
         college = CollegeDate.objects.all()
